@@ -14,3 +14,7 @@
   border-radius: 4px;
   background-color: #e0e0e0;
 }
+
+#drum-controls>.align-items-center {
+  min-height: 100%;
+}
