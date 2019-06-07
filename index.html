@@ -29,19 +29,46 @@
           <!-- TODO: these columns widths may be adjusted for size of upcoming content -->
           <div class="col-7 row" id="drum-pad">
             <div class="col-4 px-1">
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">Q</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">A</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">Z</button>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">Q</button>
+              <audio id="Qclip">
+                <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" type="audio/mpeg">
+              </audio>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">A</button>
+              <audio id="Aclip">
+                <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" type="audio/mpeg">
+              </audio>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">Z</button>
+              <audio id="Zclip">
+                <source src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" type="audio/mpeg">
+              </audio>
             </div>
             <div class="col-4 px-1">
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">W</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">S</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">X</button>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">W</button>
+              <audio id="Wclip">
+                <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" type="audio/mpeg">
+              </audio>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">S</button>
+              <audio id="Sclip">
+                <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" type="audio/mpeg">
+              </audio>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">X</button>
+              <audio id="Xclip">
+                <source src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" type="audio/mpeg">
+              </audio>
             </div>
             <div class="col-4 px-1">
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">E</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">D</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">C</button>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">E</button>
+              <audio id="Eclip">
+                <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" type="audio/mpeg">
+              </audio>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">D</button>
+              <audio id="Dclip">
+                <source src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" type="audio/mpeg">
+              </audio>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">C</button>
+              <audio id="Cclip">
+                <source src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" type="audio/mpeg">
+              </audio>
             </div>
           </div>
           <!-- TODO: these columns widths may be adjusted for size of upcoming content -->
@@ -66,6 +93,21 @@
   </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript">
+    $(function () {
+      $(".playback").click(function (e) {
+        e.preventDefault();
+
+        // This next line will get the audio element
+        // adjacent to button clicked.
+        var clip = $(this).next('audio').get(0);
+        if (clip.paused)
+          clip.play();
+        else
+          clip.pause();
+      });
+    });
   </script>
 </body>
 
