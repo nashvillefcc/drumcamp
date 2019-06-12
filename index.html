@@ -29,43 +29,52 @@
           <!-- TODO: these columns widths may be adjusted for size of upcoming content -->
           <div class="col-7 row" id="drum-pad">
             <div class="col-4 px-1">
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">Q</button>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
+                onclick='document.getElementById("display").innerHTML = "Q Clip"'>Q</button>
               <audio id="Qclip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" type="audio/mpeg">
               </audio>
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">A</button>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
+                onclick='document.getElementById("display").innerHTML = "A Clip"'>A</button>
               <audio id="Aclip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" type="audio/mpeg">
               </audio>
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">Z</button>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
+                onclick='document.getElementById("display").innerHTML = "Z Clip"'>Z</button>
               <audio id="Zclip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" type="audio/mpeg">
               </audio>
             </div>
             <div class="col-4 px-1">
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">W</button>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
+                onclick='document.getElementById("display").innerHTML = "W Clip"'>W</button>
               <audio id="Wclip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" type="audio/mpeg">
               </audio>
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">S</button>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
+                onclick='document.getElementById("display").innerHTML = "S Clip"'>S</button>
               <audio id="Sclip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" type="audio/mpeg">
               </audio>
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">X</button>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
+                onclick='document.getElementById("display").innerHTML = "X Clip"'>X</button>
               <audio id="Xclip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" type="audio/mpeg">
               </audio>
             </div>
             <div class="col-4 px-1">
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">E</button>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
+                onclick='document.getElementById("display").innerHTML = "E Clip"'>E</button>
               <audio id="Eclip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" type="audio/mpeg">
               </audio>
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">D</button>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
+                onclick='document.getElementById("display").innerHTML = "D Clip"'>D</button>
               <audio id="Dclip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" type="audio/mpeg">
               </audio>
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">C</button>
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
+                onclick='document.getElementById("display").innerHTML = "C Clip"'>C</button>
               <audio id="Cclip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" type="audio/mpeg">
               </audio>
@@ -75,7 +84,20 @@
           <div class="col-5" id="drum-controls">
             <div class="row justify-content-center align-items-center">
               <div class="col text-center">
-                <p id="display">This is the display element!</p>
+                <div id="powerSwitch" class="custom-control custom-switch" style="padding-bottom: 10px">
+                  <input type="checkbox" class="custom-control-input" id="power">
+                  <label class="custom-control-label" for="power">Power</label>
+                </div>
+                <p id="display"
+                  style="background-color: white; border-radius: 10px; padding: 5px 0 8px 0; border-style: inset;">This
+                  is the display element!</p>
+                <div id="volume-control-group">
+                  <input id="volumeRange" type="range" class="custom-range">
+                </div>
+                <div id="bankSwitch" class="custom-control custom-switch" style="padding-bottom: 10px">
+                  <input type="checkbox" class="custom-control-input" id="bank">
+                  <label class="custom-control-label" for="bank">Bank</label>
+                </div>
               </div>
             </div>
           </div>

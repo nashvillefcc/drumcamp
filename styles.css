@@ -18,3 +18,14 @@
 #drum-controls>.align-items-center {
   min-height: 100%;
 }
+
+.volume-control-group {
+  margin-bottom: 1rem;
+}
+
+.custom-range {
+  width: 100%;
+  background-color: silver !important;
+  height: 12px !important;
+  padding: 0 2px 0 2px !important;
+}
