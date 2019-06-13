@@ -29,53 +29,44 @@
           <!-- TODO: these columns widths may be adjusted for size of upcoming content -->
           <div class="col-7 row" id="drum-pad">
             <div class="col-4 px-1">
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
-                onclick='document.getElementById("display").innerHTML = "Q Clip"'>Q</button>
-              <audio id="Qclip">
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">Q</button>
+              <audio id="q-clip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" type="audio/mpeg">
               </audio>
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
-                onclick='document.getElementById("display").innerHTML = "A Clip"'>A</button>
-              <audio id="Aclip">
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">A</button>
+              <audio id="a-clip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" type="audio/mpeg">
               </audio>
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
-                onclick='document.getElementById("display").innerHTML = "Z Clip"'>Z</button>
-              <audio id="Zclip">
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">Z</button>
+              <audio id="z-clip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" type="audio/mpeg">
               </audio>
             </div>
             <div class="col-4 px-1">
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
-                onclick='document.getElementById("display").innerHTML = "W Clip"'>W</button>
-              <audio id="Wclip">
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">W</button>
+              <audio id="w-clip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" type="audio/mpeg">
               </audio>
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
-                onclick='document.getElementById("display").innerHTML = "S Clip"'>S</button>
-              <audio id="Sclip">
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">S</button>
+              <audio id="s-clip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" type="audio/mpeg">
               </audio>
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
-                onclick='document.getElementById("display").innerHTML = "X Clip"'>X</button>
-              <audio id="Xclip">
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">X</button>
+              <audio id="x-clip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" type="audio/mpeg">
               </audio>
             </div>
             <div class="col-4 px-1">
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
-                onclick='document.getElementById("display").innerHTML = "E Clip"'>E</button>
-              <audio id="Eclip">
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">E</button>
+              <audio id="e-clip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" type="audio/mpeg">
               </audio>
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
-                onclick='document.getElementById("display").innerHTML = "D Clip"'>D</button>
-              <audio id="Dclip">
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">D</button>
+              <audio id="d-clip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" type="audio/mpeg">
               </audio>
-              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0"
-                onclick='document.getElementById("display").innerHTML = "C Clip"'>C</button>
-              <audio id="Cclip">
+              <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">C</button>
+              <audio id="c-clip">
                 <source src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" type="audio/mpeg">
               </audio>
             </div>
@@ -84,19 +75,20 @@
           <div class="col-5" id="drum-controls">
             <div class="row justify-content-center align-items-center">
               <div class="col text-center">
-                <div id="powerSwitch" class="custom-control custom-switch" style="padding-bottom: 10px">
-                  <input type="checkbox" class="custom-control-input" id="power">
-                  <label class="custom-control-label" for="power">Power</label>
+                <div id="power-switch" class="custom-control custom-switch" style="padding-bottom: 10px">
+                  <input type="checkbox" class="custom-control-input" id="power-switch-input">
+                  <label class="custom-control-label" for="power-switch-input">Power</label>
                 </div>
                 <p id="display"
                   style="background-color: white; border-radius: 10px; padding: 5px 0 8px 0; border-style: inset;">This
                   is the display element!</p>
                 <div id="volume-control-group">
-                  <input id="volumeRange" type="range" class="custom-range">
+                  <input id="volume-range" type="range" class="custom-range">
                 </div>
-                <div id="bankSwitch" class="custom-control custom-switch" style="padding-bottom: 10px">
-                  <input type="checkbox" class="custom-control-input" id="bank">
-                  <label class="custom-control-label" for="bank">Bank</label>
+                <div id="bank-switch" class="custom-control custom-switch"
+                  style="padding-bottom: 10px; padding-top: 10px">
+                  <input type="checkbox" class="custom-control-input" id="bank-switch-input">
+                  <label class="custom-control-label" for="bank-switch-input">Bank</label>
                 </div>
               </div>
             </div>
@@ -116,20 +108,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
-  <script type="text/javascript">
-    $(function () {
-      $(".playback").click(function (e) {
-        e.preventDefault();
-
-        // This next line will get the audio element
-        // adjacent to button clicked.
-        var clip = $(this).next('audio').get(0);
-        if (clip.paused)
-          clip.play();
-        else
-          clip.pause();
-      });
-    });
+  <script src="./audio.js" crossorigin="anonymous">
   </script>
 </body>
 
