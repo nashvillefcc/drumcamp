@@ -2,71 +2,146 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="./styles.css" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <title>DRUM CAMP</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>DRUM CAMP</title>
 </head>
 
 <body>
-  <a id="bootstrap-demos-link" href="./bootstrap component demos/">Demo page</a>
+    <a id="bootstrap-demos-link" href="./bootstrap component demos/">Demo page</a>
 
-  <br />
+    <br />
 
-  <h1 class="text-center">Drum Machine</h1>
-  <h2 class="text-center text-muted">Free Code Camp Nashville</h2>
+    <h1 class="text-center">Drum Machine</h1>
+    <h2 class="text-center text-muted">Free Code Camp Nashville</h2>
 
-  <div class="container p-1">
-    <div class="row justify-content-center">
-      <div class="col-8" id="drum-machine">
-        <div class="row">
-          <!-- TODO: these columns widths may be adjusted for size of upcoming content -->
-          <div class="col-7 row" id="drum-pad">
-            <div class="col-4 px-1">
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">Q</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">A</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">Z</button>
+    <div class="container p-1">
+        <div class="row justify-content-center">
+            <div class="col-8" id="drum-machine">
+                <div class="row">
+                    <!-- TODO: these columns widths may be adjusted for size of upcoming content -->
+                    <div class="col-7" id="drum-pad">
+                        <div class="row">
+                            <div class="col-4 px-1 pads">
+                                <button id="q-button" type="button"
+                                    class="playback btn-danger btn-lg my-1 w-100 px-0">Q</button>
+                                <audio id="Heater 1" class="heater1">
+                                    <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"
+                                        type="audio/mpeg">
+                                </audio>
+
+                                <button id="a-button" type="button"
+                                    class="playback btn-danger btn-lg my-1 w-100 px-0">A</button>
+                                <audio id="Heater 4" class="heater4">
+                                    <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3"
+                                        type="audio/mpeg">
+                                </audio>
+
+                                <button id="z-button" type="button"
+                                    class="playback btn-danger btn-lg my-1 w-100 px-0">Z</button>
+                                <audio id="Kick Hat" class="kickHat">
+                                    <source src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
+                                        type="audio/mpeg">
+                                </audio>
+
+                            </div>
+                            <div class="col-4 px-1">
+                                <button id="w-button" type="button"
+                                    class="playback btn-danger btn-lg my-1 w-100 px-0">W</button>
+                                <audio id="Heater 2" class="heater2">
+                                    <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"
+                                        type="audio/mpeg">
+                                </audio>
+
+                                <button id="s-button" type="button"
+                                    class="playback btn-danger btn-lg my-1 w-100 px-0">S</button>
+                                <audio id="Clap" class="clap">
+                                    <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3"
+                                        type="audio/mpeg">
+                                </audio>
+
+                                <button id="x-button" type="button"
+                                    class="playback btn-danger btn-lg my-1 w-100 px-0">X</button>
+                                <audio id="Kick" class="kick">
+                                    <source src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"
+                                        type="audio/mpeg">
+                                </audio>
+
+                            </div>
+                            <div class="col-4 px-1">
+                                <button id="e-button" type="button"
+                                    class="playback btn-danger btn-lg my-1 w-100 px-0">E</button>
+                                <audio id="Heater 3" class="heater3">
+                                    <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"
+                                        type="audio/mpeg">
+                                </audio>
+
+                                <button id="d-button" type="button"
+                                    class="playback btn-danger btn-lg my-1 w-100 px-0">D</button>
+                                <audio id="Open HH" class="openHH">
+                                    <source src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"
+                                        type="audio/mpeg">
+                                </audio>
+
+                                <button id="c-button" type="button"
+                                    class="playback btn-danger btn-lg my-1 w-100 px-0">C</button>
+                                <audio id="Closed HH" class="closedHH">
+                                    <source src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
+                                        type="audio/mpeg">
+                                </audio>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TODO: these columns widths may be adjusted for size of upcoming content -->
+                    <div class="col-5" id="drum-controls">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center">
+                                <div id="power-switch" class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="power-switch-input" value=0>
+                                    <label class="custom-control-label" for="power-switch-input">Power</label>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <p id="display">&nbsp;</p>
+                            </div>
+                            <div class="col-12 text-center">
+                                <div id="volume-control-group">
+                                    <input id="volume-range" type="range" class="custom-range">
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <div id="bank-switch" class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="bank-switch-input" value=0>
+                                    <label class="custom-control-label" for="bank-switch-input">Bank</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-4 px-1">
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">W</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">S</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">X</button>
-            </div>
-            <div class="col-4 px-1">
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">E</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">D</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">C</button>
-            </div>
-          </div>
-          <!-- TODO: these columns widths may be adjusted for size of upcoming content -->
-          <div class="col-5" id="drum-controls">
-            <div class="row justify-content-center align-items-center">
-              <div class="col text-center">
-                <p id="display">This is the display element!</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+    <script src="./audio.js" type="text/javascript">
+    </script>
 </body>
 
 </html>
