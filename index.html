@@ -27,28 +27,74 @@
       <div class="col-8" id="drum-machine">
         <div class="row">
           <!-- TODO: these columns widths may be adjusted for size of upcoming content -->
-          <div class="col-7 row" id="drum-pad">
-            <div class="col-4 px-1">
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">Q</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">A</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">Z</button>
-            </div>
-            <div class="col-4 px-1">
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">W</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">S</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">X</button>
-            </div>
-            <div class="col-4 px-1">
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">E</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">D</button>
-              <button type="button" class="btn-danger btn-lg my-1 w-100 px-0">C</button>
+          <div class="col-7" id="drum-pad">
+            <div class="row">
+              <div class="col-4 px-1">
+                <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">Q</button>
+                <audio id="q-clip">
+                  <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" type="audio/mpeg">
+                </audio>
+                <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">A</button>
+                <audio id="a-clip">
+                  <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" type="audio/mpeg">
+                </audio>
+                <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">Z</button>
+                <audio id="z-clip">
+                  <source src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" type="audio/mpeg">
+                </audio>
+              </div>
+              <div class="col-4 px-1">
+                <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">W</button>
+                <audio id="w-clip">
+                  <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" type="audio/mpeg">
+                </audio>
+                <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">S</button>
+                <audio id="s-clip">
+                  <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" type="audio/mpeg">
+                </audio>
+                <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">X</button>
+                <audio id="x-clip">
+                  <source src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" type="audio/mpeg">
+                </audio>
+              </div>
+              <div class="col-4 px-1">
+                <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">E</button>
+                <audio id="e-clip">
+                  <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" type="audio/mpeg">
+                </audio>
+                <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">D</button>
+                <audio id="d-clip">
+                  <source src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" type="audio/mpeg">
+                </audio>
+                <button type="button" class="playback btn-danger btn-lg my-1 w-100 px-0">C</button>
+                <audio id="c-clip">
+                  <source src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" type="audio/mpeg">
+                </audio>
+              </div>
             </div>
           </div>
           <!-- TODO: these columns widths may be adjusted for size of upcoming content -->
           <div class="col-5" id="drum-controls">
             <div class="row justify-content-center align-items-center">
-              <div class="col text-center">
-                <p id="display">This is the display element!</p>
+              <div class="col-12 text-center">
+                <div id="power-switch" class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="power-switch-input">
+                  <label class="custom-control-label" for="power-switch-input">Power</label>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <p id="display">&nbsp;</p>
+              </div>
+              <div class="col-12 text-center">
+                <div id="volume-control-group">
+                  <input id="volume-range" type="range" class="custom-range">
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <div id="bank-switch" class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="bank-switch-input">
+                  <label class="custom-control-label" for="bank-switch-input">Bank</label>
+                </div>
               </div>
             </div>
           </div>
@@ -66,6 +112,8 @@
   </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="./audio.js" crossorigin="anonymous">
   </script>
 </body>
 
