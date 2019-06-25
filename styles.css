@@ -19,6 +19,12 @@
   min-height: 100%;
 }
 
+#display {
+  background-color: white;
+  border-radius: 10px;
+  border-style: inset;
+}
+
 .volume-control-group {
   margin-bottom: 1rem;
 }
