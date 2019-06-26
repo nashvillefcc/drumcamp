@@ -11,29 +11,11 @@ powerToggle.addEventListener('input', () => {
     if (powerToggle.checked) {
         display.innerHTML = "Power On";
         $(".playback").removeAttr('disabled');
-        enableKeypresses();
     } else {
         display.innerHTML = 'Power Off';
         $(".playback").attr('disabled', 'disabled');
-        disableKeypresses();
     }
 });
-
-const keyButtonMappings = [113, 97, 122, 119, 115, 120, 101, 100, 99];
-const buttonElems = $('#drum-pad button');
-
-function enableKeypresses() {
-    $(document).keypress(function (event) {
-        let buttonIndex = keyButtonMappings.indexOf(event.keyCode);
-        if (buttonIndex > -1) {
-            buttonElems[buttonIndex].click();
-        }
-    });
-}
-
-function disableKeypresses() {
-    $(document).unbind('keypress');
-}
 
 // Bank toggle ON and OFF
 const bankToggle = document.getElementById("bank-switch-input");
@@ -126,4 +108,14 @@ $(".playback").click(function (e) {
 
     clip.currentTime = 0;
     clip.play();
+});
+
+const keyButtonMappings = [113, 97, 122, 119, 115, 120, 101, 100, 99];
+const buttonElems = $('#drum-pad button');
+
+$(document).keypress(function (event) {
+    let buttonIndex = keyButtonMappings.indexOf(event.keyCode);
+    if (buttonIndex > -1) {
+        buttonElems[buttonIndex].click();
+    }
 });
