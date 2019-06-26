@@ -99,7 +99,9 @@ function assignAudioBank(audioBank) {
 }
 assignAudioBank(audioBank1);
 
-$(".playback").click(function (e) {
+// Button click event handler
+const buttonElems = $('#drum-pad button');
+buttonElems.click(function (e) {
     e.preventDefault();
 
     let clip = $(this).next('audio').get(0);
@@ -110,9 +112,8 @@ $(".playback").click(function (e) {
     clip.play();
 });
 
+// Key press event handler
 const keyButtonMappings = [113, 97, 122, 119, 115, 120, 101, 100, 99];
-const buttonElems = $('#drum-pad button');
-
 $(document).keypress(function (event) {
     let buttonIndex = keyButtonMappings.indexOf(event.keyCode);
     if (buttonIndex > -1) {
