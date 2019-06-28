@@ -3,17 +3,18 @@ const display = document.getElementById("display");
 display.innerHTML = 'Power Off';
 
 // Disable audio buttons
-$('.playback').attr('disabled', 'disabled');
+const buttonElems = $('#drum-pad button');
+buttonElems.attr('disabled', 'disabled');
 
 // Power toggle ON and OFF
 const powerToggle = document.getElementById("power-switch-input");
 powerToggle.addEventListener('input', () => {
     if (powerToggle.checked) {
         display.innerHTML = "Power On";
-        $(".playback").removeAttr('disabled');
+        buttonElems.removeAttr('disabled');
     } else {
         display.innerHTML = 'Power Off';
-        $(".playback").attr('disabled', 'disabled');
+        buttonElems.attr('disabled', 'disabled');
     }
 });
 
@@ -100,7 +101,6 @@ function assignAudioBank(audioBank) {
 assignAudioBank(audioBank1);
 
 // Button click event handler
-const buttonElems = $('#drum-pad button');
 buttonElems.click(function (e) {
     e.preventDefault();
 

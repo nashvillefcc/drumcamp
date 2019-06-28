@@ -44,16 +44,16 @@ body {
     padding: 0 2px 0 2px !important;
 }
 
-.playback {
+#drum-pad button {
     box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
     border: 1px solid grey !important;
 }
 
-.playback:hover {
+#drum-pad button:hover {
     background-color: rgba(182, 100, 100, 0.89) !important;
 }
 
-.playback:focus{
+#drum-pad button:focus {
     background-color: grey !important;
     color: black !important;
 }
@@ -87,14 +87,14 @@ body {
         margin-right: auto;
     }
 
-    .playback {
+    #drum-pad button {
         height: 65px;
         border: 1px solid grey !important;
     }
 
-    .playback:focus {
+    #drum-pad button:focus {
         background-color: grey !important;
         color: black !important;
     }
-  
+
 }
