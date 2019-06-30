@@ -44,57 +44,16 @@ body {
     padding: 0 2px 0 2px !important;
 }
 
-.playback {
-    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
+#drum-pad button {
+    box-shadow: rgba(0, 0, 0, 0.514) 4px 4px 4px;
     border: 1px solid grey !important;
 }
 
-.playback:hover {
+#drum-pad button:hover {
     background-color: rgba(182, 100, 100, 0.89) !important;
 }
 
-.playback:focus{
+#drum-pad button:focus {
     background-color: grey !important;
     color: black !important;
-}
-
-@media screen and (max-width: 420px) {
-    body {
-        height: 100%;
-        width: 100%;
-        min-width: 420px;
-    }
-
-    .row {
-        display: flex !important;
-        margin: 0.8em;
-    }
-
-    #drum-pad {
-        min-width: 275px !important;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 1em;
-    }
-
-    #drum-controls {
-        min-width: 275px !important;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .playback {
-        height: 65px;
-        border: 1px solid grey !important;
-    }
-
-    .playback:focus {
-        background-color: grey !important;
-        color: black !important;
-    }
-  
 }
