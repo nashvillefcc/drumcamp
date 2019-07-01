@@ -1,37 +1,59 @@
+body {
+    background-color: rgb(201, 201, 201) !important;
+}
+
 #bootstrap-demos-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: all 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 1s ease-in-out;
 }
 
 #bootstrap-demos-link:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 #drum-machine {
-  border-radius: 4px;
-  background-color: #e0e0e0;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+    border-style: outset;
+    border-color: rgb(128, 111, 111);
 }
 
 #drum-controls>.align-items-center {
-  min-height: 100%;
+    min-height: 100%;
 }
 
 #display {
-  background-color: white;
-  border-radius: 10px;
-  border-style: inset;
+    background-color: white;
+    border-radius: 10px;
+    border-style: inset;
+    min-height: 30px;
+    font-weight: bold;
 }
 
 .volume-control-group {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .custom-range {
-  width: 100%;
-  background-color: silver !important;
-  height: 12px !important;
-  padding: 0 2px 0 2px !important;
+    width: 100%;
+    background-color: silver !important;
+    height: 12px !important;
+    padding: 0 2px 0 2px !important;
+}
+
+#drum-pad button {
+    box-shadow: rgba(0, 0, 0, 0.514) 4px 4px 4px;
+    border: 1px solid grey !important;
+}
+
+#drum-pad button:hover {
+    background-color: rgba(182, 100, 100, 0.89) !important;
+}
+
+#drum-pad button:focus {
+    background-color: grey !important;
+    color: black !important;
 }
